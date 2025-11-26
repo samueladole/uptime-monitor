@@ -136,9 +136,3 @@ go build -o uptime-monitor
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 ---
-
-## **Contact**
-For questions, feature requests, or contributions:  
-- GitHub: [yourusername/uptime-monitor](https://github.com/yourusername/uptime-monitor)  
-- Email: `youremail@example.com`
-

@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/fatih/color"
 )
 
 func checkWebsite(url string) {
@@ -18,9 +21,11 @@ func checkWebsite(url string) {
 
 	if resp.StatusCode == 200 {
 		logStatus(url, true, "")
-		log.Printf("[UP] %s\n", url)
+		message := fmt.Sprintf("[UP] %s\n", url)
+		color.Green(message)
 	} else {
 		logStatus(url, false, resp.Status)
-		log.Printf("[DOWN] %s : %s\n", url, resp.Status)
+		message := fmt.Sprintf("[DOWN] %s : %s\n", url, resp.Status)
+		color.Red(message)
 	}
 }

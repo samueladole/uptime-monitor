@@ -11,7 +11,7 @@ import (
 
 func startWebServer() {
 	http.HandleFunc("/", dashboardHandler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
 
 func dashboardHandler(w http.ResponseWriter, r *http.Request) {
